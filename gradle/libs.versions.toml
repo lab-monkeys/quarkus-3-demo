@@ -1,0 +1,27 @@
+[versions]
+# Version values for all dependencies
+# version names be, at least, the group and we will replace the . with a -
+# if a group has several modules we use we have 2 paths
+# if each name in the group uses the same vesion, the name will be ${group}
+# if each name in a group has its own version, the name will be ${group}-${name}
+
+# library versions
+io-quarkus-platform = "3.0.0.Alpha1"
+
+
+# All libraries will be in the format of ${group}-${name}
+[libraries]
+io-quarkus-quarkus-bom = { module = "io.quarkus:quarkus-bom",  version.ref = "io-quarkus-platform" }
+io-quarkus-quarkus-grpc = { module = "io.quarkus:quarkus-grpc"}
+io-quarkus-quarkus-arc = { module = "io.quarkus:quarkus-arc"}
+io-quarkus-quarkus-junit5 = { module = "io.quarkus:quarkus-junit5" }
+
+[bundles]
+io-quarkus-platform = [
+  "io-quarkus-quarkus-grpc",
+  "io-quarkus-quarkus-arc"
+]
+
+io-quarkus-platofm-testing = [
+  "io-quarkus-quarkus-junit5"
+]
