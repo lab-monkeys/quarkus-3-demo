@@ -13,10 +13,9 @@ val quarkusPlatformArtifactId: String by project
 val quarkusPlatformVersion: String by project
 
 dependencies {
-  implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
-  implementation("io.quarkus:quarkus-grpc")
-  implementation("io.quarkus:quarkus-arc")
-  testImplementation("io.quarkus:quarkus-junit5")
+  implementation(enforcedPlatform(libs.io.quarkus.quarkus.bom))
+  implementation(libs.bundles.io.quarkus.platform)
+  testImplementation(libs.bundles.io.quarkus.platofm.testing)
 }
 
 group = "org.acme"
