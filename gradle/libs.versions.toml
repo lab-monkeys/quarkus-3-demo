@@ -7,9 +7,6 @@
 
 # library versions
 io-quarkus-platform = "3.0.0.Alpha1"
-#plug in versions
-# naming convention is the id with . replaced with -, -plugin is appended to be clear
-io-quarkus-plugin-version = "3.0.0.Alpha1"
 
 
 # All libraries will be in the format of ${group}-${name}
@@ -28,9 +25,3 @@ io-quarkus-platform = [
 io-quarkus-platofm-testing = [
   "io-quarkus-quarkus-junit5"
 ]
-
-# all plugins will be the id with the . replaced with -
-[plugins]
-io-quarkus-plugin = { id = "io.quarkus", version.ref = "io-quarkus-plugin-version" }
-
-
